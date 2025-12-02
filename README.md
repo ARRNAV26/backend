@@ -4,14 +4,14 @@
 TwinCode is a modern, real-time collaborative code editor that enables multiple developers to work together on the same codebase simultaneously. Built with cutting-edge web technologies, it provides instant synchronization of code changes, intelligent autocomplete suggestions, and a polished user experience.
 
 ## ✨ Features
-- **🔗 Room-Based Collaboration**: Create unique collaborative sessions with shareable URLs
-- **⚡ Real-Time Synchronization**: See code changes instantly across all connected users (WebSocket-powered)
-- **🤖 AI-Powered Autocomplete**: Intelligent code completion triggered after brief typing pauses
-- **💾 Persistent Sessions**: Code is automatically saved and survives browser refreshes
-- **🎨 Professional UI**: Material-UI design with responsive mobile support
-- **🔒 CORS Security**: Configured for production deployment safety
+- ** Room-Based Collaboration**: Create unique collaborative sessions with shareable URLs
+- ** Real-Time Synchronization**: See code changes instantly across all connected users (WebSocket-powered)
+- ** AI-Powered Autocomplete**: Intelligent code completion triggered after brief typing pauses
+- ** Persistent Sessions**: Code is automatically saved and survives browser refreshes
+- ** Professional UI**: Material-UI design with responsive mobile support
+- ** CORS Security**: Configured for production deployment safety
 
-## 🚀 How to Run Both Services
+## How to Run Both Services
 
 ### Prerequisites
 - Python 3.8+
@@ -53,7 +53,7 @@ npm start
 docker-compose up --build
 ```
 
-## 🏗️ Architecture and Design Choices
+## Architecture and Design Choices
 
 ### Backend Architecture (FastAPI)
 - **Layered Architecture**: Separated routers, services, models, and configuration
@@ -80,7 +80,7 @@ docker-compose up --build
 - **UUID Rooms**: Unpredictable room IDs prevent enumeration
 - **Rate Limiting**: Configurable per-endpoint throttling ready
 
-## 🎯 Deployed Demo Link
+## Deployed Demo Link
 
 **🌐 [Live Demo: twinco.netlify.app](https://twinco.netlify.app)**
 
@@ -122,7 +122,7 @@ The frontend is deployed on Netlify with the backend running on Koyeb. The appli
 - **Network Latency**: Geographic distribution affects real-time responsiveness
 - **Scalability**: Single-server architecture limits horizontal scaling
 
-## 🏆 Technical Achievements
+## Technical Achievements
 
 - **Zero-Configuration Development**: Hot-reloaded frontend/backend with environment switching
 - **Type Safety**: Full TypeScript coverage with Pydantic validation
@@ -131,7 +131,7 @@ The frontend is deployed on Netlify with the backend running on Koyeb. The appli
 - **Code Quality**: ESLint compliance, cognitive complexity optimization
 - **Developer Experience**: Clear architecture, comprehensive documentation, and modular code
 
-## 🛠️ Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
