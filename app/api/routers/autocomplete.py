@@ -1,5 +1,8 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
+import random
+
+from app.services.autocomplete_service import get_mocked_autocomplete_suggestion
 
 router = APIRouter()
 
@@ -13,21 +16,14 @@ class AutocompleteResponse(BaseModel):
 
 @router.post("", response_model=AutocompleteResponse)
 async def get_autocomplete(request: AutocompleteRequest) -> AutocompleteResponse:
-    # Mocked suggestions based on the language
-    suggestions = {
-        "python": [
-            "def ",
-            "class ",
-            "import ",
-            "print(",
-            "if __name__ == '__main__':"
-        ]
-    }
-
     language = request.language.lower()
-    if language not in suggestions:
-        raise HTTPException(status_code=400, detail="Unsupported language")
 
-    # Return the first suggestion as a mock
-    suggestion = suggestions[language][0]
+    result = get_mocked_autocomplete_suggestion(request.code, request.cursorPosition, language)
+    suggestions = result["suggestions"]
+
+    if suggestions:
+        suggestion = random.choice(suggestions)
+    else:
+        suggestion = ""  # No suggestion available
+
     return AutocompleteResponse(suggestion=suggestion)
